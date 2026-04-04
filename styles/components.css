@@ -1,0 +1,205 @@
+.nav-link {
+    padding: 1rem 1.4rem;
+    border-radius: 999px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--surface-dark);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.typing-text {
+    font-size: clamp(2.8rem, 4vw, 4rem);
+    font-weight: 700;
+    min-height: 5.6rem;
+}
+
+.typing-text span {
+    position: relative;
+    color: var(--accent);
+}
+
+.typing-text span::before {
+    content: "UI Designer";
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    width: calc(100% + 1rem);
+    height: 100%;
+    background-color: transparent;
+    border-left: 3px solid var(--text-main);
+    animation: cursor 0.7s infinite;
+}
+
+.marquee-container {
+    overflow: hidden;
+    padding: 1.2rem 0;
+}
+
+.track {
+    display: flex;
+    gap: 1.6rem;
+    width: max-content;
+}
+
+.portfolio-section {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    padding: 4rem 3rem;
+    border-radius: 3.2rem;
+    background:
+        radial-gradient(circle at top right, rgba(0, 153, 255, 0.2), transparent 25%),
+        linear-gradient(180deg, var(--surface-dark-soft), var(--surface-dark));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-strong);
+}
+
+.project-card {
+    width: clamp(22rem, 28vw, 32rem);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 2.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+}
+
+.top-row {
+    animation: scroll-left 22s linear infinite;
+}
+
+.bottom-row {
+    animation: scroll-right 22s linear infinite;
+}
+
+.footer-logo {
+    font-size: clamp(4.6rem, 8vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -0.3rem;
+    line-height: 0.95;
+}
+
+.footer-copy {
+    margin-top: 1.4rem;
+    max-width: 42rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.link-column h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.24rem;
+    text-transform: uppercase;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 1.8rem;
+}
+
+.footer-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background: #eef4ff;
+    font-size: 2rem;
+    color: var(--text-main);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+    transform: translateY(-2px);
+    background: var(--accent);
+    color: #ffffff;
+}
+
+@keyframes cursor {
+    0%,
+    45% {
+        border-color: transparent;
+    }
+
+    46%,
+    100% {
+        border-color: var(--text-main);
+    }
+}
+
+@keyframes words {
+    0%,
+    20% {
+        content: "UI Designer";
+    }
+
+    21%,
+    40% {
+        content: "3D Designer";
+    }
+
+    41%,
+    60% {
+        content: "Builder";
+    }
+
+    61%,
+    100% {
+        content: "Businessman";
+    }
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .top-row,
+    .bottom-row,
+    .typing-text span::before,
+    .typing-text span::after {
+        animation: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .portfolio-section {
+        padding: 3rem 1.8rem;
+        border-radius: 2.4rem;
+    }
+
+    .nav-link {
+        flex: 1 1 30%;
+        text-align: center;
+    }
+}
