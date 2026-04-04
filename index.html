@@ -1,65 +1,250 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>reli portfolio</title>
-</head>
-<body>
-    <header>
-        <nav>
-        <a href="#" class="#">Home</a>
-        <a href="#" >About me</a>
-        <a href="#" >Contact me</a>
-        </nav>
-    </header>
-    <section class="home">
-    </div>
-    <div class="home-content">
-        <h1>Hi, I'm <span>Matthew</span></h1>
-        <h3 class="typing-text">I'm a <span></span></h3>
-        <p> I work in mostly 3D design, Building then UI Design. 
-            Ive spent the past 3 years learning 3d modeling in programs 
-            such as Blender. I have hundreds of hours modeling, and building.
-        Another thing is I am good at business. With over $3,000 in sales and counting.</p>
-    </div>
-<section class="portfolio-section">
-    <div class="marquee-container">
-        <div class="track top-row">
-            <img src="Content/SliderImages/RTX5090Render.png" class="project-card">
-            <img src="Content/SliderImages/SeasonPassUI.png" class="project-card">
-            <img src="Content/SliderImages/ShopIdea.png" class="project-card">
-            <img src="Content/SliderImages/M1903.png" class="project-card">
-        </div>
-    </div>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
-    <div class="marquee-container">
-        <div class="track bottom-row">
-             <img src="Content/SliderImages/RTX5090Render.png" class="project-card">
-            <img src="Content/SliderImages/SeasonPassUI.png" class="project-card">
-            <img src="Content/SliderImages/ShopIdea.png" class="project-card">
-            <img src="Content/SliderImages/M1903.png" class="project-card">
-        </div>
-    </div>
-</section>
-        <footer class="main-footer">
-    <div class="footer-container">
+*{
+    margin: 1;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
 
-            <h2 class="footer-logo">RELI</h2>
-            <div class="link-column">
-                <p></p>
-                <h3>CONNECT WITH ME</h3>
-                <div class="footer-social-icons">
-                    <a href="https://github.com/relilolzz"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://x.com/relilolzz"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://discordapp.com/users/518530575074721794"><i class="fa-brands fa-discord"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-</section>
-</body>
-</html>
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: white;
+    color:black;
+}
+
+header{
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+nav a{
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    color: black;
+    align-items: center;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a.active{
+    border: 2px solid#000000;
+    border-radius: 4rem;
+    background-color:rgb(0, 0, 0);
+    color: white;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: white;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 2;
+}
+
+span{
+    color: #0099ff
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #0099ff;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: black;
+}
+
+.social-icons a:hover{
+    color:white;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #0099ff;
+    box-shadow: 0 0 25px #0099ff;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "3d Designer";
+    color:rgb(0, 140, 255);
+    animation: words 10s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color:white;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid rgb(0, 0, 0);
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid white;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "UI Designer";
+    }
+    21%, 40%{
+        content: "3D Designer"
+    }
+    41%, 60%{
+        content: "Builder"
+    }
+    61%, 100%{
+        content: "Businessman"
+    }
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    display: flex;
+}
+
+.track{
+    display: flex;
+    gap: 15px;
+    width: max-content;
+}
+.portfolio-section {
+    background-color: rgb(17, 17, 17);
+    padding: 60px 0;        
+    width: 105%;
+    border-top: 1px solid rgba(0, 153, 255, 0.1); 
+    border-bottom: 1px solid rgba(0, 153, 255, 0.1);
+}
+
+.marquee-container {
+    background: transparent;
+}
+
+.project-card {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.top-row {
+    animation: scroll-left 10s linear infinite;
+}
+
+.bottom-row{
+    animation: scroll-right 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.main-footer{
+    background-color: white;
+    color: black;
+    padding: 8rem 9%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-logo{
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #0099ff;
+    line-height: 1;
+}
+
+.link-column h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.footer-social-icons a {
+    color: #000;
+    font-size: 2.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #0099ff;
+    transform: translateY(-3px);
+}
