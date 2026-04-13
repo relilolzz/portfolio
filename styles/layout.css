@@ -107,6 +107,33 @@ body {
     gap: 2rem;
 }
 
+.view-all-container {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0 3rem;
+}
+
+.view-all-btn {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1e293b;
+    text-decoration: none;
+    padding: 1rem 2.4rem;
+    border: 2px solid #1e293b;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    background: transparent;
+}
+
+.view-all-btn:hover {
+    background-color: #1e293b;
+    color: #fff;
+    transform: translateX(4px);
+    box-shadow: var(--shadow-soft);
+}
+
 @media (max-width: 900px) {
     .site-header {
         top: 1.2rem;
@@ -146,5 +173,10 @@ body {
     .footer-shell {
         width: min(calc(100% - 2.4rem), var(--max-width));
         padding: 2.4rem;
+    }
+
+    .view-all-btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
     }
 }
