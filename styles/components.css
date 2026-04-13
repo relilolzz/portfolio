@@ -1,5 +1,5 @@
 .nav-link {
-    padding: 1rem 1.4rem;
+    padding: 1rem 1rem;
     border-radius: 999px;
     font-size: 1.4rem;
     font-weight: 600;
@@ -45,8 +45,26 @@
 .marquee-container {
     overflow: hidden;
     padding: 1.2rem 0;
+    text-align: center;
 }
 
+.view-all-projects {
+    display: inline-flex;
+    margin: 2rem auto 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.view-all-projects:hover {
+    color: #ffffff50;
+}
 .track {
     display: flex;
     gap: 1.6rem;
@@ -54,7 +72,7 @@
 }
 
 .portfolio-section {
-    margin-top: 3rem;
+    margin-top: -13rem;
     margin-bottom: 4rem;
     padding: 4rem 3rem;
     border-radius: 3.2rem;
