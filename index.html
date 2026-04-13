@@ -3,69 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Reli Portfolio</title>
+    <title>reli portfolio</title>
 </head>
 <body>
-    <div id="site-header"></div>
+    <header>
+        <nav>
+        <a href="#" class="#">Home</a>
+        <a href="#" >About me</a>
+        <a href="#" >Contact me</a>
+        </nav>
+    </header>
+    <section class="home">
+    </div>
+    <div class="home-content">
+        <h1>Hi, I'm <span>Matthew</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+        <p> I work in mostly 3D design, Building then UI Design. 
+            Ive spent the past 3 years learning 3d modeling in programs 
+            such as Blender. I have hundreds of hours modeling, and building.
+        Another thing is I am good at business. With over $3,000 in sales and counting.</p>
+    </div>
+<section class="portfolio-section">
+    <div class="marquee-container">
+        <div class="track top-row">
+            <img src="Content/SliderImages/RTX5090Render.png" class="project-card">
+            <img src="Content/SliderImages/SeasonPassUI.png" class="project-card">
+            <img src="Content/SliderImages/ShopIdea.png" class="project-card">
+            <img src="Content/SliderImages/M1903.png" class="project-card">
+        </div>
+    </div>
 
-    <main>
-        <section class="home section" id="home">
-            <div class="home-content">
-                <p class="eyebrow">Portfolio</p>
-                <h1>Hi, I'm <span>Matthew</span></h1>
-                <h2 class="typing-text">I'm a <span></span></h2>
-                <p class="intro-copy">
-                    I work mostly in 3D design, building, and UI design. I've spent the past three years
-                    learning 3D modeling in tools such as Blender, and I have hundreds of hours invested
-                    in modeling and building. I also understand business, with more than $3,000 in sales
-                    and counting.
-                </p>
-            </div>
-        </section>
+    <div class="marquee-container">
+        <div class="track bottom-row">
+             <img src="Content/SliderImages/RTX5090Render.png" class="project-card">
+            <img src="Content/SliderImages/SeasonPassUI.png" class="project-card">
+            <img src="Content/SliderImages/ShopIdea.png" class="project-card">
+            <img src="Content/SliderImages/M1903.png" class="project-card">
+        </div>
+    </div>
 
-        <section class="portfolio-section section" id="work" aria-labelledby="work-title">
-            <div class="section-heading">
-                <p class="eyebrow">Selected Work</p>
-                <h2 id="work-title">Recent renders, UI concepts, and product ideas.</h2>
-            </div>
+    <div class="view-all-container">
+        <a href="#projects" class="view-all-btn">VIEW ALL PROJECTS ></a>
+    </div>
+</section>
+        <footer class="main-footer">
+    <div class="footer-container">
 
-            <div class="marquee-container">
-                <div class="track top-row">
-                    <img src="Content/SliderImages/RTX5090Render.png" alt="RTX 5090 render concept" class="project-card">
-                    <img src="Content/SliderImages/SeasonPassUI.png" alt="Season pass UI design" class="project-card">
-                    <img src="Content/SliderImages/ShopIdea.png" alt="Shop interface concept" class="project-card">
-                    <img src="Content/SliderImages/M1903.png" alt="M1903 model render" class="project-card">
-                    <img src="Content/SliderImages/RTX5090Render.png" alt="RTX 5090 render concept" class="project-card" aria-hidden="true">
-                    <img src="Content/SliderImages/SeasonPassUI.png" alt="Season pass UI design" class="project-card" aria-hidden="true">
-                    <img src="Content/SliderImages/ShopIdea.png" alt="Shop interface concept" class="project-card" aria-hidden="true">
-                    <img src="Content/SliderImages/M1903.png" alt="M1903 model render" class="project-card" aria-hidden="true">
+            <h2 class="footer-logo">RELI</h2>
+            <div class="link-column">
+                <p></p>
+                <h3>CONNECT WITH ME</h3>
+                <div class="footer-social-icons">
+                    <a href="https://github.com/relilolzz"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/relilolzz"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://discordapp.com/users/518530575074721794"><i class="fa-brands fa-discord"></i></a>
                 </div>
             </div>
-
-            <div class="marquee-container">
-                <div class="track bottom-row">
-                    <img src="Content/SliderImages/RTX5090Render.png" alt="RTX 5090 render concept" class="project-card">
-                    <img src="Content/SliderImages/SeasonPassUI.png" alt="Season pass UI design" class="project-card">
-                    <img src="Content/SliderImages/ShopIdea.png" alt="Shop interface concept" class="project-card">
-                    <img src="Content/SliderImages/M1903.png" alt="M1903 model render" class="project-card">
-                    <img src="Content/SliderImages/RTX5090Render.png" alt="RTX 5090 render concept" class="project-card" aria-hidden="true">
-                    <img src="Content/SliderImages/SeasonPassUI.png" alt="Season pass UI design" class="project-card" aria-hidden="true">
-                    <img src="Content/SliderImages/ShopIdea.png" alt="Shop interface concept" class="project-card" aria-hidden="true">
-                    <img src="Content/SliderImages/M1903.png" alt="M1903 model render" class="project-card" aria-hidden="true">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="site-footer"></div>
-
-    <script src="scripts/components/header.js"></script>
-    <script src="scripts/components/footer.js"></script>
-    <script src="scripts/main.js"></script>
+        </div>
+    </div>
+</footer>
+</section>
 </body>
 </html>
