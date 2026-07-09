@@ -10,7 +10,7 @@
 .nav-link:hover,
 .nav-link.active {
     background: var(--surface-dark);
-    color: #ffffff;
+    color: #121212;
     transform: translateY(-1px);
 }
 
