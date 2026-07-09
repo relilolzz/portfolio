@@ -1,10 +1,10 @@
 :root {
-    --page-bg: #f5f7fb;
+    --page-bg: #121212;
     --surface: rgba(255, 255, 255, 0.82);
     --surface-strong: #242424;
     --surface-dark: #10151d;
     --surface-dark-soft: #171e28;
-    --text-main: #111827;
+    --text-main: #e0eaff;
     --text-muted: #4b5563;
     --accent: #0099ff;
     --accent-deep: #0070cc;
