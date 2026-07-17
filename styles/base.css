@@ -34,8 +34,8 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background:
-        radial-gradient(circle at top left, rgba(0, 153, 255, 0.12), transparent 28%),
-        linear-gradient(180deg, #ffffff 0%, #f3f6fb 58%, #eef2f7 100%);
+        radial-gradient(circle at top left, rgba(59, 157, 255, 0.14), transparent 28%),
+        linear-gradient(180deg, var(--page-bg) 0%, #0d1218 58%, #0a0e13 100%);
     color: var(--text-main);
     font-family: "Poppins", sans-serif;
 }
